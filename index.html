@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9f9f3">
+  <title>Syntactic Parsing in the LLM Era · Parsing Index</title>
+  <meta name="description" content="An annotated collection of papers, treebanks and tools for constituency and dependency parsing, accompanying Reconfiguring Parsing in the Large Language Model Era.">
+  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="diagram.css">
+  <script defer src="library.js"></script>
+  <script defer src="diagram.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#library">Skip to paper library</a>
+  <header class="masthead">
+    <div class="wrap nav-wrap">
+      <a class="brand" href="#top" aria-label="Parsing Index home"><span aria-hidden="true" class="brand-mark">[ ]</span> Parsing Index</a>
+      <nav aria-label="Main navigation" class="top-links">
+        <a href="#library">Papers</a><a href="#resources">Resources</a><a href="https://github.com/synlp/Parsing">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Survey companion</p>
+        <h1 id="hero-title">Syntactic parsing <em>in the LLM era</em></h1>
+        <p class="intro">How do language models build parse trees, help annotate treebanks, and handle unfamiliar languages or domains? Explore the research behind these questions.</p>
+        <div class="hero-actions"><a class="primary" href="#library">Browse papers</a><a class="secondary" href="#resources">Treebanks &amp; tools</a></div>
+        <p class="survey-credit"><em>Reconfiguring Parsing in the Large Language Model Era</em><br>Yan Song, Yuanhe Tian, and Fei Xia</p>
+      </div>
+      <div class="hero-figure"><figure class="syntax-figure" aria-label="Two parses of Birds build nests" data-syntax-figure>
+  <div class="syntax-figure__choices" role="group" aria-label="Choose a parse representation">
+    <button type="button" data-parse="constituency" aria-pressed="true">Constituency</button>
+    <button type="button" data-parse="dependency" aria-pressed="false">Dependency</button>
+  </div>
+  <canvas class="syntax-figure__canvas" role="img" aria-label="Phrase structure tree of Birds build nests" aria-describedby="syntax-caption">
+    Birds forms the subject noun phrase. Build and the noun phrase nests form the verb phrase.
+  </canvas>
+  <figcaption id="syntax-caption" aria-live="polite">The sentence splits into the noun phrase “Birds” and the verb phrase “build nests”.</figcaption>
+</figure>
+</div>
+    </section>
+    <section class="library" id="library" aria-labelledby="library-title">
+      <div class="wrap">
+        <div class="section-title"><h2 id="library-title">Paper library</h2><p>Selected readings from the survey, with earlier work on phrase structure and word dependencies. Entries are ordered by publication year.</p></div>
+        <div class="catalog-layout">
+          <aside class="controls" aria-label="Paper filters" data-enhanced hidden>
+            <div class="filter-group">
+              <span id="topic-label" class="filter-label">Research direction</span>
+              <div class="topic-buttons" role="group" aria-labelledby="topic-label">
+                <button type="button" data-topic="" aria-pressed="true">All papers <span>37</span></button>
+                <button type="button" data-topic="Direct parsing" aria-pressed="false">Direct parsing <span></span></button>
+                <button type="button" data-topic="Resource construction" aria-pressed="false">Resource construction <span></span></button>
+                <button type="button" data-topic="Application scenarios" aria-pressed="false">Application scenarios <span></span></button>
+                <button type="button" data-topic="Foundations" aria-pressed="false">Foundations <span></span></button>
+              </div>
+            </div>
+            <div class="filter-group">
+              <label class="filter-label" for="tree-type">Structure</label>
+              <select class="filter-select" id="tree-type"><option value="">All structures</option><option>Constituency</option><option>Dependency</option><option>Other syntax</option></select>
+            </div>
+          </aside>
+          <div class="results">
+            <div class="results-toolbar">
+              <div class="search-box" data-enhanced hidden><label for="search" class="sr-only">Search the paper library</label><input type="search" id="search" placeholder="Search by title, author, year or method" autocomplete="off"></div>
+              <span class="result-count" id="result-count" role="status">37 papers</span>
+            </div>
+            <div id="records"><article class="record" data-topics="Resource construction|Application scenarios" data-types="Dependency">
+  <div class="record-year">2026</div>
+  <div class="record-body">
+    <p class="record-meta">Liu et al. · Expert Systems with Applications</p>
+    <h3><a href="https://doi.org/10.1016/j.eswa.2026.131600">Improving cross-lingual dependency parsing via LLM-based transferring and self-optimizing synthetic data augmentation</a></h3>
+    <p class="record-note">The authors combine cross-lingual transfer with feedback from a dependency parser to generate training trees for four low-resource languages.</p>
+    <p class="record-tags">Dependency · Synthetic treebanks</p>
+  </div>
+</article>
+<article class="record" data-topics="Resource construction|Application scenarios" data-types="Constituency|Dependency">
+  <div class="record-year">2026</div>
+  <div class="record-body">
+    <p class="record-meta">Li et al. · Computer Speech &amp; Language</p>
+    <h3><a href="https://doi.org/10.1016/j.csl.2025.101826">Universal constituency treebanking and parsing: A pilot study</a></h3>
+    <p class="record-note">The authors align phrase labels across languages and use LLM-derived syntactic knowledge to convert dependency trees into constituency training data.</p>
+    <p class="record-tags">Constituency · Dependency · Treebank conversion</p>
+  </div>
+</article>
+<article class="record" data-topics="Direct parsing" data-types="Dependency">
+  <div class="record-year">2025</div>
+  <div class="record-body">
+    <p class="record-meta">Ezquerro et al. · NoDaLiDa / Baltic-HLT</p>
+    <h3><a href="https://aclanthology.org/2025.nodalida-1.13/">Better Benchmarking LLMs for Zero-Shot Dependency Parsing</a></h3>
+    <p class="record-note">The study compares open-weight models with baselines that construct trees without seeing the sentence, including randomly sampled projective trees.</p>
+    <p class="record-tags">Dependency · Zero-shot evaluation</p>
+  </div>
+</article>
+<article class="record" data-topics="Direct parsing|Application scenarios" data-types="Dependency">
+  <div class="record-year">2025</div>
+  <div class="record-body">
+    <p class="record-meta">Zhou et al. · RANLP</p>
+    <h3><a href="https://aclanthology.org/2025.ranlp-1.166/">Branching Out: Exploration of Chinese Dependency Parsing with Fine-tuned Large Language Models</a></h3>
+    <p class="record-note">Different encodings for training Chinese Llama-3 change both how often it produces a valid tree and how accurately it attaches words.</p>
+    <p class="record-tags">Dependency · Tree serialization</p>
+  </div>
+</article>
+<article class="record" data-topics="Direct parsing" data-types="Constituency">
+  <div class="record-year">2025</div>
+  <div class="record-body">
+    <p class="record-meta">Bai et al. · IEEE TASLPRO</p>
+    <h3><a href="https://ieeexplore.ieee.org/document/11130901/">Constituency Parsing Using LLMs</a></h3>
+    <p class="record-note">The authors compare prompting and supervised training for tree generation, then study how learning from errors and revising outputs affect tree validity.</p>
+    <p class="record-tags">Constituency · Supervised fine-tuning</p>
+  </div>
+</article>
+<article class="record" data-topics="Resource construction|Application scenarios" data-types="Constituency">
+  <div class="record-year">2025</div>
+  <div class="record-body">
+    <p class="record-meta">Guo et al. · ACL</p>
+    <h3><a href="https://aclanthology.org/2025.acl-long.1331/">Contrastive Learning on LLM Back Generation Treebank for Cross-domain Constituency Parsing</a></h3>
+    <p class="record-note">An LLM fills gaps in phrase trees that contain domain keywords, creating training examples for a parser that learns to distinguish spans.</p>
+    <p class="record-tags">Constituency · Synthetic treebanks</p>
+  </div>
+</article>
+<article class="record" data-topics="Direct parsing|Application scenarios" data-types="Constituency">
+  <div class="record-year">2025</div>
+  <div class="record-body">
+    <p class="record-meta">Sun et al. · ICIC</p>
+    <h3><a href="https://link.springer.com/chapter/10.1007/978-981-95-0014-7_24">Cross-Domain Constituency Parsing with Multi-LLM Debate</a></h3>
+    <p class="record-note">Several models fine-tuned on a small source-domain sample debate their proposed analyses over multiple rounds to parse sentences from a new domain.</p>
+    <p class="record-tags">Constituency · Multi-model debate</p>
+  </div>
+</article>
+<article class="record" data-topics="Resource construction" data-types="Other syntax">
+  <div class="record-year">2025</div>
+  <div class="record-body">
+    <p class="record-meta">Weissweiler et al. · NEJLT</p>
+    <h3><a href="https://nejlt.ep.liu.se/article/view/5256">Hybrid Human-LLM Corpus Construction and LLM Evaluation for the Caused-Motion Construction</a></h3>
+    <p class="record-note">Dependency parsing and LLM assistance help annotators collect examples in which a sentence describes one participant causing another to move.</p>
+    <p class="record-tags">Other syntax · Construction annotation</p>
+  </div>
+</article>
+<article class="record" data-topics="Direct parsing|Application scenarios" data-types="Dependency">
+  <div class="record-year">2025</div>
+  <div class="record-body">
+    <p class="record-meta">Ginn &amp; Palmer · XLLM</p>
+    <h3><a href="https://aclanthology.org/2025.xllm-1.17/">LLM Dependency Parsing with In-Context Rules</a></h3>
+    <p class="record-note">Across eight low-resource languages, rules improved zero-shot parsing, but adding them yielded no further benefit once the prompt included labeled examples.</p>
+    <p class="record-tags">Dependency · Rule-guided prompting</p>
+  </div>
+</article>
+<article class="record" data-topics="Direct parsing|Application scenarios" data-types="Dependency">
+  <div class="record-year">2025</div>
+  <div class="record-body">
+    <p class="record-meta">Liu et al. · Findings of EMNLP</p>
+    <h3><a href="https://aclanthology.org/2025.findings-emnlp.101/">Memory-enhanced Large Language Model for Cross-lingual Dependency Parsing via Deep Hierarchical Syntax Understanding</a></h3>
+    <p class="record-note">Multitask training produces an initial parse, then multilingual tables of dependency labels guide the model on relations it handles poorly.</p>
+    <p class="record-tags">Dependency · Cross-lingual fine-tuning</p>
+  </div>
+</article>
+<article class="record" data-topics="Resource construction|Application scenarios" data-types="Dependency">
+  <div class="record-year">2025</div>
+  <div class="record-body">
+    <p class="record-meta">Kellert et al. · Findings of EMNLP</p>
+    <h3><a href="https://aclanthology.org/2025.findings-emnlp.863/">Parsing the Switch: LLM-Based UD Annotation for Complex Code-Switched and Low-Resource Languages</a></h3>
+    <p class="record-note">Experts revise LLM-generated dependency trees to build annotated corpora for Spanish–English and Spanish–Guaraní code-switching.</p>
+    <p class="record-tags">Dependency · Code-switched annotation</p>
+  </div>
+</article>
+<article class="record" data-topics="Resource construction|Application scenarios" data-types="Dependency">
+  <div class="record-year">2025</div>
+  <div class="record-body">
+    <p class="record-meta">Bernhard et al. · LAW</p>
+    <h3><a href="https://aclanthology.org/2025.law-1.14/">Pre-annotation Matters: A Comparative Study on POS and Dependency Annotation for an Alsatian Dialect</a></h3>
+    <p class="record-note">For an Alsatian dialect, the authors compare three ways to draft part-of-speech tags and dependency trees before annotators correct them.</p>
+    <p class="record-tags">Dependency · Human annotation</p>
+  </div>
+</article>
+<article class="record" data-topics="Direct parsing|Application scenarios" data-types="Constituency">
+  <div class="record-year">2025</div>
+  <div class="record-body">
+    <p class="record-meta">Zhang et al. · Findings of EMNLP</p>
+    <h3><a href="https://aclanthology.org/2025.findings-emnlp.357/">Self-Correction Makes LLMs Better Parsers</a></h3>
+    <p class="record-note">A checker flags possible errors in a proposed tree and retrieves grammar rules and examples that guide the model’s next revision.</p>
+    <p class="record-tags">Constituency · Rule-guided self-correction</p>
+  </div>
+</article>
+<article class="record" data-topics="Direct parsing" data-types="Dependency">
+  <div class="record-year">2025</div>
+  <div class="record-body">
+    <p class="record-meta">Matsuda et al. · IWPT</p>
+    <h3><a href="https://aclanthology.org/2025.iwpt-1.2/">Step-by-step Instructions and a Simple Tabular Output Format Improve the Dependency Parsing Accuracy of LLMs</a></h3>
+    <p class="record-note">The parser first assigns part-of-speech tags, then writes each word’s head and relation in a simplified table tested across 17 languages.</p>
+    <p class="record-tags">Dependency · Tabular generation</p>
+  </div>
+</article>
+<article class="record" data-topics="Resource construction|Application scenarios" data-types="Dependency">
+  <div class="record-year">2024</div>
+  <div class="record-body">
+    <p class="record-meta">Özateş et al. · LAW</p>
+    <h3><a href="https://aclanthology.org/2024.law-1.18/">Dependency Annotation of Ottoman Turkish with Multilingual BERT</a></h3>
+    <p class="record-note">Annotators correct a multilingual BERT parser’s draft trees and use the corrections to retrain it as they build an Ottoman Turkish treebank.</p>
+    <p class="record-tags">Dependency · Human annotation</p>
+  </div>
+</article>
+<article class="record" data-topics="Direct parsing" data-types="Constituency">
+  <div class="record-year">2024</div>
+  <div class="record-body">
+    <p class="record-meta">Tian et al. · ACL</p>
+    <h3><a href="https://aclanthology.org/2024.acl-long.384/">Large Language Models Are No Longer Shallow Parsers</a></h3>
+    <p class="record-note">The model identifies short phrases, filters unreliable chunks and uses the remaining phrases to build a full English or Chinese parse tree.</p>
+    <p class="record-tags">Constituency · Chunk-guided prompting</p>
+  </div>
+</article>
+<article class="record" data-topics="Resource construction|Application scenarios" data-types="Dependency">
+  <div class="record-year">2024</div>
+  <div class="record-body">
+    <p class="record-meta">Zhang et al. · Computational Linguistics</p>
+    <h3><a href="https://aclanthology.org/2024.cl-3.2/">LLM-Assisted Data Augmentation for Chinese Dialogue-Level Dependency Parsing</a></h3>
+    <p class="record-note">The authors vary words, syntax and discourse structure in Chinese dialogues to train a parser on dependencies within and across discourse units.</p>
+    <p class="record-tags">Dependency · Dialogue augmentation</p>
+  </div>
+</article>
+<article class="record" data-topics="Direct parsing" data-types="Constituency">
+  <div class="record-year">2024</div>
+  <div class="record-body">
+    <p class="record-meta">Geng et al. · ACL</p>
+    <h3><a href="https://aclanthology.org/2024.acl-short.23/">Sketch-Guided Constrained Decoding for Boosting Blackbox Large Language Models without Logit Access</a></h3>
+    <p class="record-note">A black-box model drafts the parse and a local model revises that draft under grammar constraints.</p>
+    <p class="record-tags">Constituency · Sketch-guided decoding</p>
+  </div>
+</article>
+<article class="record" data-topics="Direct parsing" data-types="Dependency">
+  <div class="record-year">2024</div>
+  <div class="record-body">
+    <p class="record-meta">Hromei et al. · IJCoL</p>
+    <h3><a href="https://doi.org/10.4000/125nm">U-DepPLLaMA: Universal Dependency Parsing via Auto-regressive Large Language Models</a></h3>
+    <p class="record-note">U-DepPLLaMA learns to generate a bracketed sequence encoding a sentence’s dependency tree.</p>
+    <p class="record-tags">Dependency · Supervised fine-tuning</p>
+  </div>
+</article>
+<article class="record" data-topics="Direct parsing" data-types="Constituency|Dependency">
+  <div class="record-year">2023</div>
+  <div class="record-body">
+    <p class="record-meta">Roy et al. · NeurIPS</p>
+    <h3><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/9c1535a02f0ce079433344e14d910597-Abstract-Datasets_and_Benchmarks.html">BenchCLAMP: A Benchmark for Evaluating Language Models on Syntactic and Semantic Parsing</a></h3>
+    <p class="record-note">The benchmark compares constrained generation on Penn Treebank constituency trees and English Web Treebank dependencies across several amounts of training data.</p>
+    <p class="record-tags">Constituency · Dependency · Constrained parsing benchmark</p>
+  </div>
+</article>
+<article class="record" data-topics="Direct parsing" data-types="Dependency">
+  <div class="record-year">2023</div>
+  <div class="record-body">
+    <p class="record-meta">Lin et al. · arXiv preprint</p>
+    <h3><a href="https://arxiv.org/abs/2310.16654">ChatGPT is a Potential Zero-Shot Dependency Parser</a></h3>
+    <p class="record-note">The authors ask ChatGPT to produce dependency analyses without worked examples and examine which syntactic relations it tends to predict.</p>
+    <p class="record-tags">Dependency · Zero-shot prompting</p>
+  </div>
+</article>
+<article class="record" data-topics="Direct parsing" data-types="Constituency">
+  <div class="record-year">2023</div>
+  <div class="record-body">
+    <p class="record-meta">Geng et al. · EMNLP</p>
+    <h3><a href="https://aclanthology.org/2023.emnlp-main.674/">Grammar-Constrained Decoding for Structured NLP Tasks without Finetuning</a></h3>
+    <p class="record-note">An input-dependent grammar restricts which tokens the model can generate as it writes a constituency tree.</p>
+    <p class="record-tags">Constituency · Grammar-constrained decoding</p>
+  </div>
+</article>
+<article class="record" data-topics="Resource construction|Application scenarios" data-types="Constituency">
+  <div class="record-year">2023</div>
+  <div class="record-body">
+    <p class="record-meta">Li et al. · EMNLP</p>
+    <h3><a href="https://aclanthology.org/2023.emnlp-main.508/">LLM-enhanced Self-training for Cross-domain Constituency Parsing</a></h3>
+    <p class="record-note">Grammar rules guide an LLM to generate target-domain sentences, which a parser labels and filters for its next round of training.</p>
+    <p class="record-tags">Constituency · Cross-domain self-training</p>
+  </div>
+</article>
+<article class="record" data-topics="Foundations" data-types="Constituency">
+  <div class="record-year">2020</div>
+  <div class="record-body">
+    <p class="record-meta">Tian et al. · Findings of EMNLP</p>
+    <h3><a href="https://aclanthology.org/2020.findings-emnlp.153/">Improving Constituency Parsing with Span Attention</a></h3>
+    <p class="record-note">The parser weights n-grams inside each candidate constituent, adding evidence from the interior of a phrase to its boundary representation.</p>
+    <p class="record-tags">Constituency · Span attention</p>
+  </div>
+</article>
+<article class="record" data-topics="Foundations" data-types="Dependency">
+  <div class="record-year">2019</div>
+  <div class="record-body">
+    <p class="record-meta">Kondratyuk &amp; Straka · EMNLP–IJCNLP</p>
+    <h3><a href="https://aclanthology.org/D19-1279/">75 Languages, 1 Model: Parsing Universal Dependencies Universally</a></h3>
+    <p class="record-note">UDify fine-tunes a shared multilingual BERT encoder on 124 treebanks to predict dependency trees alongside morphology, lemmas, and part-of-speech tags.</p>
+    <p class="record-tags">Dependency · Multilingual joint training</p>
+  </div>
+</article>
+<article class="record" data-topics="Foundations|Application scenarios" data-types="Dependency">
+  <div class="record-year">2019</div>
+  <div class="record-body">
+    <p class="record-meta">Liu et al. · ACL</p>
+    <h3><a href="https://aclanthology.org/P19-1189/">Reinforced Training Data Selection for Domain Adaptation</a></h3>
+    <p class="record-note">A reinforcement learning system chooses training examples suited to a target domain, with dependency parsing among its evaluation tasks.</p>
+    <p class="record-tags">Dependency · Domain adaptation</p>
+  </div>
+</article>
+<article class="record" data-topics="Foundations" data-types="Constituency">
+  <div class="record-year">2018</div>
+  <div class="record-body">
+    <p class="record-meta">Kitaev &amp; Klein · ACL</p>
+    <h3><a href="https://aclanthology.org/P18-1249/">Constituency Parsing with a Self-Attentive Encoder</a></h3>
+    <p class="record-note">A chart parser uses self-attention to represent words in context and investigates how word content and position contribute to phrase recognition.</p>
+    <p class="record-tags">Constituency · Self-attentive chart parsing</p>
+  </div>
+</article>
+<article class="record" data-topics="Foundations" data-types="Constituency">
+  <div class="record-year">2017</div>
+  <div class="record-body">
+    <p class="record-meta">Stern et al. · ACL</p>
+    <h3><a href="https://aclanthology.org/P17-1076/">A Minimal Span-Based Neural Constituency Parser</a></h3>
+    <p class="record-note">A neural model scores spans and their labels independently, supporting both exact chart search and greedy top-down parsing.</p>
+    <p class="record-tags">Constituency · Span scoring</p>
+  </div>
+</article>
+<article class="record" data-topics="Foundations" data-types="Dependency">
+  <div class="record-year">2017</div>
+  <div class="record-body">
+    <p class="record-meta">Dozat et al. · CoNLL Shared Task</p>
+    <h3><a href="https://aclanthology.org/K17-3002/">Stanford’s Graph-based Neural Dependency Parser at the CoNLL 2017 Shared Task</a></h3>
+    <p class="record-note">A graph-based parser scores possible heads and dependency labels using contextual word representations that include character information.</p>
+    <p class="record-tags">Dependency · Biaffine arc scoring</p>
+  </div>
+</article>
+<article class="record" data-topics="Foundations" data-types="Dependency">
+  <div class="record-year">2016</div>
+  <div class="record-body">
+    <p class="record-meta">Kiperwasser &amp; Goldberg · TACL</p>
+    <h3><a href="https://aclanthology.org/Q16-1023/">Simple and Accurate Dependency Parsing Using Bidirectional LSTM Feature Representations</a></h3>
+    <p class="record-note">The authors use the same bidirectional LSTM feature design in a greedy transition parser and a globally optimized graph parser.</p>
+    <p class="record-tags">Dependency · Contextual word representations</p>
+  </div>
+</article>
+<article class="record" data-topics="Foundations" data-types="Constituency">
+  <div class="record-year">2015</div>
+  <div class="record-body">
+    <p class="record-meta">Vinyals et al. · NeurIPS</p>
+    <h3><a href="https://proceedings.neurips.cc/paper/2015/hash/277281aada22045c03945dcb2ca6f2ec-Abstract.html">Grammar as a Foreign Language</a></h3>
+    <p class="record-note">An attention-based encoder–decoder generates a phrase-structure tree as a sequence of symbols.</p>
+    <p class="record-tags">Constituency · Sequence-to-sequence parsing</p>
+  </div>
+</article>
+<article class="record" data-topics="Foundations|Application scenarios" data-types="Dependency">
+  <div class="record-year">2009</div>
+  <div class="record-body">
+    <p class="record-meta">Zhao et al. · ACL-IJCNLP</p>
+    <h3><a href="https://aclanthology.org/P09-1007/">Cross Language Dependency Parsing using a Bilingual Lexicon</a></h3>
+    <p class="record-note">A bilingual dictionary supplies word-level translations of an annotated treebank so its dependency structures can help train a parser in another language.</p>
+    <p class="record-tags">Dependency · Treebank translation</p>
+  </div>
+</article>
+<article class="record" data-topics="Foundations" data-types="Dependency">
+  <div class="record-year">2008</div>
+  <div class="record-body">
+    <p class="record-meta">Nivre · Computational Linguistics</p>
+    <h3><a href="https://aclanthology.org/J08-4003/">Algorithms for Deterministic Incremental Dependency Parsing</a></h3>
+    <p class="record-note">This study compares four transition systems for building dependencies incrementally and analyzes which trees each can construct.</p>
+    <p class="record-tags">Dependency · Transition-based parsing</p>
+  </div>
+</article>
+<article class="record" data-topics="Foundations" data-types="Constituency">
+  <div class="record-year">2006</div>
+  <div class="record-body">
+    <p class="record-meta">Petrov et al. · COLING–ACL</p>
+    <h3><a href="https://aclanthology.org/P06-1055/">Learning Accurate, Compact, and Interpretable Tree Annotation</a></h3>
+    <p class="record-note">A split-and-merge procedure learns finer grammatical categories from treebank examples while retaining familiar phrase labels in the output.</p>
+    <p class="record-tags">Constituency · Latent grammar induction</p>
+  </div>
+</article>
+<article class="record" data-topics="Foundations" data-types="Dependency">
+  <div class="record-year">2005</div>
+  <div class="record-body">
+    <p class="record-meta">McDonald et al. · ACL</p>
+    <h3><a href="https://aclanthology.org/P05-1012/">Online Large-Margin Training of Dependency Parsers</a></h3>
+    <p class="record-note">An online learning algorithm adjusts arc weights so that the gold dependency tree scores above competing trees.</p>
+    <p class="record-tags">Dependency · Large-margin training</p>
+  </div>
+</article>
+<article class="record" data-topics="Foundations" data-types="Constituency">
+  <div class="record-year">1997</div>
+  <div class="record-body">
+    <p class="record-meta">Collins · ACL–EACL</p>
+    <h3><a href="https://aclanthology.org/P97-1003/">Three Generative, Lexicalised Models for Statistical Parsing</a></h3>
+    <p class="record-note">The models generate phrase structure around lexical heads and progressively account for argument patterns and displaced constituents.</p>
+    <p class="record-tags">Constituency · Lexicalized grammar</p>
+  </div>
+</article>
+<article class="record" data-topics="Foundations" data-types="Dependency">
+  <div class="record-year">1996</div>
+  <div class="record-body">
+    <p class="record-meta">Eisner · COLING</p>
+    <h3><a href="https://aclanthology.org/C96-1058/">Three New Probabilistic Models for Dependency Parsing: An Exploration</a></h3>
+    <p class="record-note">A cubic-time algorithm finds projective dependency trees and provides a common decoder for three probabilistic models.</p>
+    <p class="record-tags">Dependency · Projective chart decoding</p>
+  </div>
+</article></div>
+            <div class="empty" id="empty" hidden><h3>No matching papers</h3><p>Try a different search term or clear the filters.</p><button type="button" class="reset" id="reset">Clear filters</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="resources" id="resources" aria-labelledby="resources-title">
+      <div class="wrap">
+        <div class="section-title"><h2 id="resources-title">Treebanks &amp; tools</h2><p>Find annotated sentences, look up relation labels, or run a parser on your own text.</p></div>
+        <div class="resource-grid">
+          <a class="resource-card" href="https://universaldependencies.org/"><small>Treebanks &amp; guidelines</small><h3>Universal Dependencies</h3><p>Browse multilingual treebanks and look up dependency relations and the CoNLL-U format.</p></a>
+          <a class="resource-card" href="https://catalog.ldc.upenn.edu/LDC99T42"><small>Treebank</small><h3>Penn Treebank</h3><p>Find the English Treebank-3 release, its phrase-structure annotations, and access terms.</p></a>
+          <a class="resource-card" href="https://github.com/nikitakit/self-attentive-parser"><small>Constituency parser</small><h3>Berkeley Neural Parser</h3><p>Run a pretrained parser to recover labeled phrases, or train a model on a new treebank.</p></a>
+          <a class="resource-card" href="https://stanfordnlp.github.io/stanza/depparse.html"><small>Dependency parser</small><h3>Stanza</h3><p>Use the dependency processor to identify each word’s head and grammatical relation.</p></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap foot-wrap"><a href="papers.json" download>Download the paper index (JSON)</a><a href="https://github.com/synlp/Parsing">Project on GitHub</a></div></footer>
+</body>
+</html>

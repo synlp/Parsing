@@ -1,0 +1,574 @@
+[
+  {
+    "title": "Improving cross-lingual dependency parsing via LLM-based transferring and self-optimizing synthetic data augmentation",
+    "authors": "Liu et al.",
+    "year": 2026,
+    "venue": "Expert Systems with Applications",
+    "url": "https://doi.org/10.1016/j.eswa.2026.131600",
+    "topics": [
+      "Resource construction",
+      "Application scenarios"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Synthetic treebanks",
+    "note": "The authors combine cross-lingual transfer with feedback from a dependency parser to generate training trees for four low-resource languages."
+  },
+  {
+    "title": "Universal constituency treebanking and parsing: A pilot study",
+    "authors": "Li et al.",
+    "year": 2026,
+    "venue": "Computer Speech & Language",
+    "url": "https://doi.org/10.1016/j.csl.2025.101826",
+    "topics": [
+      "Resource construction",
+      "Application scenarios"
+    ],
+    "types": [
+      "Constituency",
+      "Dependency"
+    ],
+    "method": "Treebank conversion",
+    "note": "The authors align phrase labels across languages and use LLM-derived syntactic knowledge to convert dependency trees into constituency training data."
+  },
+  {
+    "title": "Better Benchmarking LLMs for Zero-Shot Dependency Parsing",
+    "authors": "Ezquerro et al.",
+    "year": 2025,
+    "venue": "NoDaLiDa / Baltic-HLT",
+    "url": "https://aclanthology.org/2025.nodalida-1.13/",
+    "topics": [
+      "Direct parsing"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Zero-shot evaluation",
+    "note": "The study compares open-weight models with baselines that construct trees without seeing the sentence, including randomly sampled projective trees."
+  },
+  {
+    "title": "Branching Out: Exploration of Chinese Dependency Parsing with Fine-tuned Large Language Models",
+    "authors": "Zhou et al.",
+    "year": 2025,
+    "venue": "RANLP",
+    "url": "https://aclanthology.org/2025.ranlp-1.166/",
+    "topics": [
+      "Direct parsing",
+      "Application scenarios"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Tree serialization",
+    "note": "Different encodings for training Chinese Llama-3 change both how often it produces a valid tree and how accurately it attaches words."
+  },
+  {
+    "title": "Constituency Parsing Using LLMs",
+    "authors": "Bai et al.",
+    "year": 2025,
+    "venue": "IEEE TASLPRO",
+    "url": "https://ieeexplore.ieee.org/document/11130901/",
+    "topics": [
+      "Direct parsing"
+    ],
+    "types": [
+      "Constituency"
+    ],
+    "method": "Supervised fine-tuning",
+    "note": "The authors compare prompting and supervised training for tree generation, then study how learning from errors and revising outputs affect tree validity."
+  },
+  {
+    "title": "Contrastive Learning on LLM Back Generation Treebank for Cross-domain Constituency Parsing",
+    "authors": "Guo et al.",
+    "year": 2025,
+    "venue": "ACL",
+    "url": "https://aclanthology.org/2025.acl-long.1331/",
+    "topics": [
+      "Resource construction",
+      "Application scenarios"
+    ],
+    "types": [
+      "Constituency"
+    ],
+    "method": "Synthetic treebanks",
+    "note": "An LLM fills gaps in phrase trees that contain domain keywords, creating training examples for a parser that learns to distinguish spans."
+  },
+  {
+    "title": "Cross-Domain Constituency Parsing with Multi-LLM Debate",
+    "authors": "Sun et al.",
+    "year": 2025,
+    "venue": "ICIC",
+    "url": "https://link.springer.com/chapter/10.1007/978-981-95-0014-7_24",
+    "topics": [
+      "Direct parsing",
+      "Application scenarios"
+    ],
+    "types": [
+      "Constituency"
+    ],
+    "method": "Multi-model debate",
+    "note": "Several models fine-tuned on a small source-domain sample debate their proposed analyses over multiple rounds to parse sentences from a new domain."
+  },
+  {
+    "title": "Hybrid Human-LLM Corpus Construction and LLM Evaluation for the Caused-Motion Construction",
+    "authors": "Weissweiler et al.",
+    "year": 2025,
+    "venue": "NEJLT",
+    "url": "https://nejlt.ep.liu.se/article/view/5256",
+    "topics": [
+      "Resource construction"
+    ],
+    "types": [
+      "Other syntax"
+    ],
+    "method": "Construction annotation",
+    "note": "Dependency parsing and LLM assistance help annotators collect examples in which a sentence describes one participant causing another to move."
+  },
+  {
+    "title": "LLM Dependency Parsing with In-Context Rules",
+    "authors": "Ginn & Palmer",
+    "year": 2025,
+    "venue": "XLLM",
+    "url": "https://aclanthology.org/2025.xllm-1.17/",
+    "topics": [
+      "Direct parsing",
+      "Application scenarios"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Rule-guided prompting",
+    "note": "Across eight low-resource languages, rules improved zero-shot parsing, but adding them yielded no further benefit once the prompt included labeled examples."
+  },
+  {
+    "title": "Memory-enhanced Large Language Model for Cross-lingual Dependency Parsing via Deep Hierarchical Syntax Understanding",
+    "authors": "Liu et al.",
+    "year": 2025,
+    "venue": "Findings of EMNLP",
+    "url": "https://aclanthology.org/2025.findings-emnlp.101/",
+    "topics": [
+      "Direct parsing",
+      "Application scenarios"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Cross-lingual fine-tuning",
+    "note": "Multitask training produces an initial parse, then multilingual tables of dependency labels guide the model on relations it handles poorly."
+  },
+  {
+    "title": "Parsing the Switch: LLM-Based UD Annotation for Complex Code-Switched and Low-Resource Languages",
+    "authors": "Kellert et al.",
+    "year": 2025,
+    "venue": "Findings of EMNLP",
+    "url": "https://aclanthology.org/2025.findings-emnlp.863/",
+    "topics": [
+      "Resource construction",
+      "Application scenarios"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Code-switched annotation",
+    "note": "Experts revise LLM-generated dependency trees to build annotated corpora for Spanish–English and Spanish–Guaraní code-switching."
+  },
+  {
+    "title": "Pre-annotation Matters: A Comparative Study on POS and Dependency Annotation for an Alsatian Dialect",
+    "authors": "Bernhard et al.",
+    "year": 2025,
+    "venue": "LAW",
+    "url": "https://aclanthology.org/2025.law-1.14/",
+    "topics": [
+      "Resource construction",
+      "Application scenarios"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Human annotation",
+    "note": "For an Alsatian dialect, the authors compare three ways to draft part-of-speech tags and dependency trees before annotators correct them."
+  },
+  {
+    "title": "Self-Correction Makes LLMs Better Parsers",
+    "authors": "Zhang et al.",
+    "year": 2025,
+    "venue": "Findings of EMNLP",
+    "url": "https://aclanthology.org/2025.findings-emnlp.357/",
+    "topics": [
+      "Direct parsing",
+      "Application scenarios"
+    ],
+    "types": [
+      "Constituency"
+    ],
+    "method": "Rule-guided self-correction",
+    "note": "A checker flags possible errors in a proposed tree and retrieves grammar rules and examples that guide the model’s next revision."
+  },
+  {
+    "title": "Step-by-step Instructions and a Simple Tabular Output Format Improve the Dependency Parsing Accuracy of LLMs",
+    "authors": "Matsuda et al.",
+    "year": 2025,
+    "venue": "IWPT",
+    "url": "https://aclanthology.org/2025.iwpt-1.2/",
+    "topics": [
+      "Direct parsing"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Tabular generation",
+    "note": "The parser first assigns part-of-speech tags, then writes each word’s head and relation in a simplified table tested across 17 languages."
+  },
+  {
+    "title": "Dependency Annotation of Ottoman Turkish with Multilingual BERT",
+    "authors": "Özateş et al.",
+    "year": 2024,
+    "venue": "LAW",
+    "url": "https://aclanthology.org/2024.law-1.18/",
+    "topics": [
+      "Resource construction",
+      "Application scenarios"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Human annotation",
+    "note": "Annotators correct a multilingual BERT parser’s draft trees and use the corrections to retrain it as they build an Ottoman Turkish treebank."
+  },
+  {
+    "title": "Large Language Models Are No Longer Shallow Parsers",
+    "authors": "Tian et al.",
+    "year": 2024,
+    "venue": "ACL",
+    "url": "https://aclanthology.org/2024.acl-long.384/",
+    "topics": [
+      "Direct parsing"
+    ],
+    "types": [
+      "Constituency"
+    ],
+    "method": "Chunk-guided prompting",
+    "note": "The model identifies short phrases, filters unreliable chunks and uses the remaining phrases to build a full English or Chinese parse tree."
+  },
+  {
+    "title": "LLM-Assisted Data Augmentation for Chinese Dialogue-Level Dependency Parsing",
+    "authors": "Zhang et al.",
+    "year": 2024,
+    "venue": "Computational Linguistics",
+    "url": "https://aclanthology.org/2024.cl-3.2/",
+    "topics": [
+      "Resource construction",
+      "Application scenarios"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Dialogue augmentation",
+    "note": "The authors vary words, syntax and discourse structure in Chinese dialogues to train a parser on dependencies within and across discourse units."
+  },
+  {
+    "title": "Sketch-Guided Constrained Decoding for Boosting Blackbox Large Language Models without Logit Access",
+    "authors": "Geng et al.",
+    "year": 2024,
+    "venue": "ACL",
+    "url": "https://aclanthology.org/2024.acl-short.23/",
+    "topics": [
+      "Direct parsing"
+    ],
+    "types": [
+      "Constituency"
+    ],
+    "method": "Sketch-guided decoding",
+    "note": "A black-box model drafts the parse and a local model revises that draft under grammar constraints."
+  },
+  {
+    "title": "U-DepPLLaMA: Universal Dependency Parsing via Auto-regressive Large Language Models",
+    "authors": "Hromei et al.",
+    "year": 2024,
+    "venue": "IJCoL",
+    "url": "https://doi.org/10.4000/125nm",
+    "topics": [
+      "Direct parsing"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Supervised fine-tuning",
+    "note": "U-DepPLLaMA learns to generate a bracketed sequence encoding a sentence’s dependency tree."
+  },
+  {
+    "title": "BenchCLAMP: A Benchmark for Evaluating Language Models on Syntactic and Semantic Parsing",
+    "authors": "Roy et al.",
+    "year": 2023,
+    "venue": "NeurIPS",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/9c1535a02f0ce079433344e14d910597-Abstract-Datasets_and_Benchmarks.html",
+    "topics": [
+      "Direct parsing"
+    ],
+    "types": [
+      "Constituency",
+      "Dependency"
+    ],
+    "method": "Constrained parsing benchmark",
+    "note": "The benchmark compares constrained generation on Penn Treebank constituency trees and English Web Treebank dependencies across several amounts of training data."
+  },
+  {
+    "title": "ChatGPT is a Potential Zero-Shot Dependency Parser",
+    "authors": "Lin et al.",
+    "year": 2023,
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2310.16654",
+    "topics": [
+      "Direct parsing"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Zero-shot prompting",
+    "note": "The authors ask ChatGPT to produce dependency analyses without worked examples and examine which syntactic relations it tends to predict."
+  },
+  {
+    "title": "Grammar-Constrained Decoding for Structured NLP Tasks without Finetuning",
+    "authors": "Geng et al.",
+    "year": 2023,
+    "venue": "EMNLP",
+    "url": "https://aclanthology.org/2023.emnlp-main.674/",
+    "topics": [
+      "Direct parsing"
+    ],
+    "types": [
+      "Constituency"
+    ],
+    "method": "Grammar-constrained decoding",
+    "note": "An input-dependent grammar restricts which tokens the model can generate as it writes a constituency tree."
+  },
+  {
+    "title": "LLM-enhanced Self-training for Cross-domain Constituency Parsing",
+    "authors": "Li et al.",
+    "year": 2023,
+    "venue": "EMNLP",
+    "url": "https://aclanthology.org/2023.emnlp-main.508/",
+    "topics": [
+      "Resource construction",
+      "Application scenarios"
+    ],
+    "types": [
+      "Constituency"
+    ],
+    "method": "Cross-domain self-training",
+    "note": "Grammar rules guide an LLM to generate target-domain sentences, which a parser labels and filters for its next round of training."
+  },
+  {
+    "title": "Improving Constituency Parsing with Span Attention",
+    "authors": "Tian et al.",
+    "year": 2020,
+    "venue": "Findings of EMNLP",
+    "url": "https://aclanthology.org/2020.findings-emnlp.153/",
+    "topics": [
+      "Foundations"
+    ],
+    "types": [
+      "Constituency"
+    ],
+    "method": "Span attention",
+    "note": "The parser weights n-grams inside each candidate constituent, adding evidence from the interior of a phrase to its boundary representation."
+  },
+  {
+    "title": "75 Languages, 1 Model: Parsing Universal Dependencies Universally",
+    "authors": "Kondratyuk & Straka",
+    "year": 2019,
+    "venue": "EMNLP–IJCNLP",
+    "url": "https://aclanthology.org/D19-1279/",
+    "topics": [
+      "Foundations"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Multilingual joint training",
+    "note": "UDify fine-tunes a shared multilingual BERT encoder on 124 treebanks to predict dependency trees alongside morphology, lemmas, and part-of-speech tags."
+  },
+  {
+    "title": "Reinforced Training Data Selection for Domain Adaptation",
+    "authors": "Liu et al.",
+    "year": 2019,
+    "venue": "ACL",
+    "url": "https://aclanthology.org/P19-1189/",
+    "topics": [
+      "Foundations",
+      "Application scenarios"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Domain adaptation",
+    "note": "A reinforcement learning system chooses training examples suited to a target domain, with dependency parsing among its evaluation tasks."
+  },
+  {
+    "title": "Constituency Parsing with a Self-Attentive Encoder",
+    "authors": "Kitaev & Klein",
+    "year": 2018,
+    "venue": "ACL",
+    "url": "https://aclanthology.org/P18-1249/",
+    "topics": [
+      "Foundations"
+    ],
+    "types": [
+      "Constituency"
+    ],
+    "method": "Self-attentive chart parsing",
+    "note": "A chart parser uses self-attention to represent words in context and investigates how word content and position contribute to phrase recognition."
+  },
+  {
+    "title": "A Minimal Span-Based Neural Constituency Parser",
+    "authors": "Stern et al.",
+    "year": 2017,
+    "venue": "ACL",
+    "url": "https://aclanthology.org/P17-1076/",
+    "topics": [
+      "Foundations"
+    ],
+    "types": [
+      "Constituency"
+    ],
+    "method": "Span scoring",
+    "note": "A neural model scores spans and their labels independently, supporting both exact chart search and greedy top-down parsing."
+  },
+  {
+    "title": "Stanford’s Graph-based Neural Dependency Parser at the CoNLL 2017 Shared Task",
+    "authors": "Dozat et al.",
+    "year": 2017,
+    "venue": "CoNLL Shared Task",
+    "url": "https://aclanthology.org/K17-3002/",
+    "topics": [
+      "Foundations"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Biaffine arc scoring",
+    "note": "A graph-based parser scores possible heads and dependency labels using contextual word representations that include character information."
+  },
+  {
+    "title": "Simple and Accurate Dependency Parsing Using Bidirectional LSTM Feature Representations",
+    "authors": "Kiperwasser & Goldberg",
+    "year": 2016,
+    "venue": "TACL",
+    "url": "https://aclanthology.org/Q16-1023/",
+    "topics": [
+      "Foundations"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Contextual word representations",
+    "note": "The authors use the same bidirectional LSTM feature design in a greedy transition parser and a globally optimized graph parser."
+  },
+  {
+    "title": "Grammar as a Foreign Language",
+    "authors": "Vinyals et al.",
+    "year": 2015,
+    "venue": "NeurIPS",
+    "url": "https://proceedings.neurips.cc/paper/2015/hash/277281aada22045c03945dcb2ca6f2ec-Abstract.html",
+    "topics": [
+      "Foundations"
+    ],
+    "types": [
+      "Constituency"
+    ],
+    "method": "Sequence-to-sequence parsing",
+    "note": "An attention-based encoder–decoder generates a phrase-structure tree as a sequence of symbols."
+  },
+  {
+    "title": "Cross Language Dependency Parsing using a Bilingual Lexicon",
+    "authors": "Zhao et al.",
+    "year": 2009,
+    "venue": "ACL-IJCNLP",
+    "url": "https://aclanthology.org/P09-1007/",
+    "topics": [
+      "Foundations",
+      "Application scenarios"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Treebank translation",
+    "note": "A bilingual dictionary supplies word-level translations of an annotated treebank so its dependency structures can help train a parser in another language."
+  },
+  {
+    "title": "Algorithms for Deterministic Incremental Dependency Parsing",
+    "authors": "Nivre",
+    "year": 2008,
+    "venue": "Computational Linguistics",
+    "url": "https://aclanthology.org/J08-4003/",
+    "topics": [
+      "Foundations"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Transition-based parsing",
+    "note": "This study compares four transition systems for building dependencies incrementally and analyzes which trees each can construct."
+  },
+  {
+    "title": "Learning Accurate, Compact, and Interpretable Tree Annotation",
+    "authors": "Petrov et al.",
+    "year": 2006,
+    "venue": "COLING–ACL",
+    "url": "https://aclanthology.org/P06-1055/",
+    "topics": [
+      "Foundations"
+    ],
+    "types": [
+      "Constituency"
+    ],
+    "method": "Latent grammar induction",
+    "note": "A split-and-merge procedure learns finer grammatical categories from treebank examples while retaining familiar phrase labels in the output."
+  },
+  {
+    "title": "Online Large-Margin Training of Dependency Parsers",
+    "authors": "McDonald et al.",
+    "year": 2005,
+    "venue": "ACL",
+    "url": "https://aclanthology.org/P05-1012/",
+    "topics": [
+      "Foundations"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Large-margin training",
+    "note": "An online learning algorithm adjusts arc weights so that the gold dependency tree scores above competing trees."
+  },
+  {
+    "title": "Three Generative, Lexicalised Models for Statistical Parsing",
+    "authors": "Collins",
+    "year": 1997,
+    "venue": "ACL–EACL",
+    "url": "https://aclanthology.org/P97-1003/",
+    "topics": [
+      "Foundations"
+    ],
+    "types": [
+      "Constituency"
+    ],
+    "method": "Lexicalized grammar",
+    "note": "The models generate phrase structure around lexical heads and progressively account for argument patterns and displaced constituents."
+  },
+  {
+    "title": "Three New Probabilistic Models for Dependency Parsing: An Exploration",
+    "authors": "Eisner",
+    "year": 1996,
+    "venue": "COLING",
+    "url": "https://aclanthology.org/C96-1058/",
+    "topics": [
+      "Foundations"
+    ],
+    "types": [
+      "Dependency"
+    ],
+    "method": "Projective chart decoding",
+    "note": "A cubic-time algorithm finds projective dependency trees and provides a common decoder for three probabilistic models."
+  }
+]
