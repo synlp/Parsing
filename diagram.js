@@ -76,7 +76,7 @@
       });
     }
     ["Birds", "build", "nests"].forEach((word, i) =>
-      label(word, positions[i], 146, 'italic 23px Georgia, "Times New Roman", serif')
+      label(word, positions[i], 146, '500 19px Inter, Arial, sans-serif')
     );
   }
 
@@ -90,6 +90,7 @@
     redraw();
   }));
   redraw();
+  document.fonts.ready.then(redraw);
   if (window.ResizeObserver) new ResizeObserver(redraw).observe(figure);
   else window.addEventListener("resize", redraw);
 })();

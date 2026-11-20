@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "Instrument Serif";
-  src: url("./assets/InstrumentSerif-Regular.ttf") format("truetype");
+  font-family: "Inter";
+  src: url("./assets/InterVariable.woff2") format("woff2");
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100 900;
   font-display: swap;
 }
 :root {
@@ -15,8 +15,7 @@
   --sage: #e9eee2;
   --line: #ced7c9;
   --accent: #875414;
-  --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
-  --sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
 }
 *, *::before, *::after { box-sizing: border-box; }
@@ -69,7 +68,7 @@ button, select { cursor: pointer; }
   align-items: center;
   gap: .6rem;
   color: var(--ink);
-  font: 400 1.65rem/1 var(--serif);
+  font: 550 1.25rem/1.3 var(--sans);
   text-decoration: none;
 }
 .brand-mark {
@@ -105,11 +104,11 @@ button, select { cursor: pointer; }
 h1, h2, h3, p { margin: 0; }
 .hero h1 {
   margin: 0;
-  font: 400 clamp(3.65rem, 6.65vw, 6.2rem)/.94 var(--serif);
-  letter-spacing: -.035em;
+  font: 540 clamp(2rem, 4.95vw, 4.3rem)/1.17 var(--sans);
+  letter-spacing: .005em;
 }
 .hero h1 br { display: none; }
-.hero h1 em { display: block; font-weight: 400; color: #456a4c; }
+.hero h1 em { display: block; font-style: normal; font-weight: 450; color: #456a4c; }
 .intro {
   max-width: 37rem;
   margin-top: 1.4rem;
@@ -139,7 +138,7 @@ h1, h2, h3, p { margin: 0; }
 .secondary { text-decoration: underline; }
 .library, .resources { border-top: 1px solid var(--line); padding-block: clamp(2.6rem, 5vw, 4.75rem); }
 .section-title { margin-bottom: 1.8rem; }
-.section-title h2 { font: 400 clamp(2.65rem, 4.4vw, 4rem)/1.03 var(--serif); letter-spacing: -.025em; }
+.section-title h2 { font: 540 clamp(1.95rem, 3.4vw, 3rem)/1.23 var(--sans); }
 .section-title p { max-width: 52rem; margin-top: .65rem; color: var(--muted); }
 .catalog-layout { display: grid; grid-template-columns: minmax(11.875rem, 14.6875rem) minmax(0, 1fr); gap: clamp(1.75rem, 5vw, 4.25rem); align-items: start; }
 .controls {
@@ -213,7 +212,7 @@ select.filter-select, .filter-select select {
 .record:last-child { border-bottom: 1px solid var(--line); }
 .record-year { padding-top: .2rem; color: var(--accent); font: 600 .93rem/1.5 var(--mono); }
 .record-meta { color: var(--muted); font: 500 .825rem/1.5 var(--mono); }
-.record h3 { margin: .2rem 0 .45rem; font: 400 clamp(1.55rem, 2.2vw, 2rem)/1.13 var(--serif); }
+.record h3 { margin: .2rem 0 .45rem; font: 550 clamp(1.2rem, 1.75vw, 1.52rem)/1.4 var(--sans); }
 .record h3 a { text-decoration: none; }
 .record h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
 .record-note { color: var(--body); line-height: 1.55; }
@@ -243,7 +242,7 @@ select.filter-select, .filter-select select {
 }
 .resource-card:hover { background: var(--sage); border-top-color: var(--forest); }
 .resource-card small { color: var(--muted); }
-.resource-card h3 { margin: .6rem 0 .48rem; font: 400 1.65rem/1.12 var(--serif); }
+.resource-card h3 { margin: .6rem 0 .48rem; font: 550 1.27rem/1.35 var(--sans); }
 .resource-card p { color: var(--body); font-size: 1rem; line-height: 1.5; }
 footer { border-top: 1px solid var(--line); color: var(--muted); }
 .foot-wrap .survey-credit { margin: 0; }
@@ -257,12 +256,12 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 @media (max-width: 44rem) {
   .wrap { width: calc(100% - 2.25rem); }
   .nav-wrap { min-height: 4rem; gap: .75rem; flex-wrap: wrap; padding-block: .65rem; }
-  .brand { font-size: 1.45rem; }
+  .brand { font-size: 1.08rem; }
   .top-links { gap: .75rem; }
   .top-links a { font-size: .875rem; }
   .hero, .catalog-layout { grid-template-columns: 1fr; }
   .hero { gap: 2rem; }
-  .hero h1 { font-size: clamp(3.4rem, 12vw, 4.75rem); }
+  .hero h1 { font-size: clamp(2rem, 8.9vw, 3.5rem); }
   .catalog-layout { gap: 1.3rem; }
   .controls { position: static; }
   .topic-buttons { display: flex; flex-wrap: wrap; gap: .4rem; }
